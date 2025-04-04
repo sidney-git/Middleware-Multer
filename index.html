@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middleware</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+    <div class="container">
+        
+        <header><h1>Middlewar</h1>    <h1>Multer</h1> </header>
+       
+        
+
+    
+
+
+        
+        <div class="conteudo2">
+            
+            
+            <div class="middleware">
+
+                
+
+                <h2 id="h3">O que é Middleware?</h2>
+<p>Middleware é uma função que tem acesso ao <strong>objeto de requisição (req)</strong>, <strong>objeto de resposta (res)</strong> e à função <strong>next()</strong> no ciclo de requisição-resposta de uma aplicação Express.js.</p>
+<p>Ele pode modificar a requisição, resposta ou encerrar o ciclo sem passar para a próxima função.</p>
+
+<h2>Por que usar Middleware?</h2>
+<p>Os middlewares permitem a manipulação de requisições antes que cheguem ao controlador final.</p>
+
+<h3>Principais usos do Middleware:</h3>
+<ul>
+    <p class="p1"> Processamento de requisições antes de chegar ao roteador.</p>
+    <p class="p1"> Autenticação e autorização de usuários.</p>
+    <p class="p1"> Manipulação de erros centralizada.</p>
+    <p class="p1"> Registro (logging) de requisições.</p>
+    <p class="p1"> Compressão e otimização de respostas.</p>
+</ul>
+
+<h2>Tipos de Middleware</h2>
+<p>No Express.js, existem diferentes tipos de middleware:</p>
+
+<h3> Middleware de Aplicação</h3>
+<p>Executado para todas as requisições na aplicação.</p>
+
+<h3> Middleware de Rota</h3>
+<p>Executado apenas para rotas específicas.</p>
+
+<h3> Middleware Incorporado</h3>
+<p>Middlewares que já vêm com o Express, como <code>express.json()</code> e <code>express.urlencoded()</code>.</p>
+
+<h3> Middleware de Terceiros</h3>
+<p>Middlewares criados por terceiros, como <strong>Morgan</strong> (para logs) e <strong>CORS</strong> (para requisições entre domínios).</p>
+
+<h3> Middleware de Manipulação de Erros</h3>
+<p>Utilizado para capturar e tratar erros globalmente.</p>
+
+<h2>Como criar um Middleware?</h2>
+<p>Um middleware em Express.js é uma função que recebe três parâmetros: <code>req</code>, <code>res</code> e <code>next</code>. Ele pode modificar a requisição, enviar uma resposta ou chamar <code>next()</code> para passar para o próximo middleware.</p>
+
+<h3>Exemplo de Middleware:</h3>
+<pre><code>
+function meuMiddleware(req, res, next) {
+    console.log("Middleware ativado!");
+    next(); // Passa para o próximo middleware ou rota
+}
+</code></pre>
+
+<h2>Middleware no Express.js</h2>
+<p>Para usar um middleware no Express, basta adicioná-lo ao app com <code>app.use()</code> ou diretamente em rotas específicas.</p>
+</code></pre>
+
+            </div>
+
+
+
+
+            <div class="multer">
+
+                
+
+<h2 id="h2">O que é Multer?</h2>
+<p>Multer é um <strong>middleware</strong> para <strong>Express.js</strong> que permite o <strong>upload de arquivos</strong>. Ele processa <strong>multipart/form-data</strong>, que é o formato necessário para enviar arquivos via formulários HTML.</p>
+
+<h2>Por que usar o Multer?</h2>
+<p>O Multer facilita o gerenciamento de arquivos enviados pelos usuários. Sem ele, o Express <strong>não consegue lidar com uploads</strong> de forma eficiente.</p>
+
+<h3>Vantagens do Multer:</h3>
+<ul>
+     <p>Processa arquivos rapidamente no servidor.p</p>
+     <p>Permite armazenar arquivos no disco ou na memória.</p>
+     <p>Suporta múltiplos arquivos simultaneamente.</p>
+</ul>
+
+<h2>Como instalar o Multer?</h2>
+
+<p>Para instalar o Multer em um projeto Node.js, basta rodar:</p>
+<h4>npm install multer</h4>
+<p>Isso adiciona o Multer às dependências do projeto.</p>
+
+
+<h2>Como configurar o Multer?</h2>
+
+<p>O Multer permite armazenar arquivos de duas formas:</p>
+
+<h3>1 Armazenamento no Disco:</h3>
+<p>Os arquivos são salvos no servidor.</p>
+
+<h3> 2 Armazenamento na Memória:</h3>
+<p>Os arquivos são armazenados temporariamente.</p>
+
+<h3>Outras configurações do Multer:</h3>
+<ul>
+    <p class="p1"><strong>Pasta de destino:</strong> Define onde os arquivos serão salvos.</p>
+    <p class="p1"><strong>Nome do arquivo:</strong> Pode ser alterado automaticamente.</p>
+    <p class="p1"><strong>Filtros:</strong> Permitem restringir tipos de arquivos aceitos (exemplo: apenas imagens).</p>
+</ul>
+
+<h2>Como fazer upload com Multer?</h2>
+<p>O Multer pode ser usado de diferentes maneiras para lidar com uploads:</p>
+
+<h3> Upload de um único arquivo:</h3>
+<p>Permite enviar apenas um arquivo por vez.</p>
+
+<h3> Upload de múltiplos arquivos:</h3>
+<p>Aceita vários arquivos ao mesmo tempo.</p>
+
+<h3> Upload de arquivos com validação:</h3>
+<p>Pode verificar tamanho, tipo e extensão antes de aceitar o upload.</p>
+
+            </div>
+
+        </div>
+    </div>
+    
+    
+    
+
+
+
+
+
+
+</body>
+</html>
